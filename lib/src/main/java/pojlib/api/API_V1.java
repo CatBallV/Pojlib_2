@@ -77,7 +77,7 @@ public class API_V1 {
         MinecraftAccount newaccount = new MinecraftAccount();
         newaccount.username = "name";
         newaccount.uuid = "71acb00e-a573-40eb-ba19-63d5613117ef";
-        newaccount.accessToken = "0";
+        newaccount.accessToken = "1";
         return newaccount;
     }
 

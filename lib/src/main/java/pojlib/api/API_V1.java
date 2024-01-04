@@ -72,6 +72,15 @@ public class API_V1 {
         return instance.hasCustomMod(name);
     }
 
+    public static MinecraftAccount Newaccount(String name) {
+
+        MinecraftAccount newaccount = new MinecraftAccount();
+        newaccount.username = "name";
+        newaccount.uuid = "71acb00e-a573-40eb-ba19-63d5613117ef";
+        newaccount.accessToken = "0";
+        return newaccount;
+    }
+
     /**
      * @return if the operation succeeds
      */

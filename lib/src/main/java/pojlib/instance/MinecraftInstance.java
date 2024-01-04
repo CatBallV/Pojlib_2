@@ -343,10 +343,14 @@ public class MinecraftInstance {
     public void launchInstance(Activity activity, MinecraftAccount account) {
         try {
             JREUtils.redirectAndPrintJRELog();
+            Logger.getInstance().appendToLog("launchInstance2");
             VLoader.setAndroidInitInfo(activity);
+            Logger.getInstance().appendToLog("launchInstance3");
             VLoader.setEGLGlobal(JREUtils.getEGLContextPtr(), JREUtils.getEGLDisplayPtr(), JREUtils.getEGLConfigPtr());
             while(!API_V1.finishedDownloading);
+            Logger.getInstance().appendToLog("launchInstance4");
             JREUtils.launchJavaVM(activity, generateLaunchArgs(account), versionName);
+            Logger.getInstance().appendToLog("launchInstance5");
         } catch (Throwable e) {
             e.printStackTrace();
         }
